@@ -2,6 +2,8 @@ let charmanderImage;
 let bulbasaurImage;
 let squirtleImage;
 let charmanderSound;
+let bulbasaurSound;
+let squirtleSound;
  
 function preload() {
    charmanderImage = loadImage("images/charmander.png");
@@ -9,6 +11,8 @@ function preload() {
    squirtleImage = loadImage("images/squirtle.png");
  
    charmanderSound = loadSound("sounds/charmander.mp3");
+   bulbasaurSound = loadSound("sounds/bulbasaur.mp3");
+   squirtleSound = loadSound("sounds/squirtle.mp3");
 }
  
 function setup() {
@@ -33,5 +37,13 @@ function draw() {
 function mouseClicked() {
    if (mouseX > 100 && mouseX < 200 && mouseY > 200 && mouseY < 300) {
        charmanderSound.play();
+   }
+ 
+   if (mouseX > 200 && mouseX < 300 && mouseY > 200 && mouseY < 300) {
+       bulbasaurSound.play();
+   }
+ 
+   if (mouseX > 300 && mouseX < 400 && mouseY > 200 && mouseY < 300) {
+       squirtleSound.play();
    }
 }
